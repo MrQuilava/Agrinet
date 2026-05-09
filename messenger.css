@@ -1,0 +1,151 @@
+:root {
+    --dark-green: #0d2b1d;
+    --mint-green: #a3e0a1;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* For mobile preview */
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--mint-green);
+}
+
+.messenger-container {
+    width: 100%;
+    max-width: 450px; /* Mobile width */
+    margin: 0 auto;
+    background-color: var(--dark-green);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.messenger-header {
+    background-color: var(--mint-green);
+    padding: 10px 15px;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.main-logo { height: 35px; }
+.header-controls { display: flex; gap: 15px; color: var(--dark-green); font-size: 22px; cursor: pointer;}
+.messenger-header h1 { margin: 5px 0; color: var(--dark-green); font-size: 28px; }
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--white);
+    color: var(--dark-green);
+    outline: none;
+}
+
+/* --- The Scrolling List Area --- */
+.contacts-area {
+    flex: 1; /* Fills remaining height */
+    overflow-y: auto; /* Enables scrolling */
+    padding: 10px 0;
+}
+
+/* Fix for the <a> links in the list */
+.contact-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+/* A single contact row */
+.contact-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(163, 224, 161, 0.1); 
+    transition: background 0.2s;
+}
+
+.contact-row:hover, .contact-row:active {
+    background-color: rgba(163, 224, 161, 0.1); 
+}
+
+/* Large avatar circles */
+.avatar-lg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--mint-green);
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+.avatar-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; /* Stack name and location vertically */
+    justify-content: center; 
+}
+
+.name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-info h2 { 
+    margin: 0; 
+    font-size: 18px; 
+    color: var(--mint-green); 
+}
+
+.verify-check {
+    color: #3897f0;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Subtext (Location/Recent message) */
+.contact-info p {
+    margin: 2px 0 0 0;
+    font-size: 13px;
+    color: rgba(163, 224, 161, 0.7);
+}
+
+/* The Unread Badge */
+.unread-badge {
+    background-color: var(--mint-green);
+    color: var(--dark-green);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.role-label {
+    font-size: 11px;
+    background-color: var(--mint-green);
+    color: var(--dark-green);
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 4px;
+    width: fit-content;
+}

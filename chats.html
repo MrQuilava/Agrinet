@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriNet | DM</title>
+    <link rel="stylesheet" href="chats.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+    <div class="messenger-container">
+        <header class="chat-header-main">
+            <div class="header-top">
+                <img src="logo.png" class="chat-logo">
+                <div class="exit-btn"><a href="messenger.html">Exit ➔</a></div>
+            </div>
+            <div class="header-nav">
+                <h2 id="chatPartnerName">Loading...</h2>
+                <button id="addFriendBtn" class="friend-action-btn">+ Add Friend</button>
+            </div>
+        </header>
+
+        <main class="chat-area" id="chatDisplay">
+            <!-- Messages appear here -->
+        </main>
+
+        <footer class="chat-footer">
+            <div class="input-pill">
+                <input type="text" id="userInput" placeholder="Type a message...">
+            </div>
+            <div class="footer-actions">
+                <span id="sendBtn">➤</span>
+            </div>
+        </footer>
+    </div>
+    <script src="chats.js"></script>
+</body>
+</html>

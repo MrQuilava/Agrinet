@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriNet | Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+
+    <div class="phone-wrapper">
+        <div class="phone-container">
+            <!-- Header Section -->
+            <header class="app-header">
+                <div class="header-main">
+                    <div class="logo-area">
+                        <h1 class="logo-text">AgriNet</h1>
+                    </div>
+                    <div class="hamburger">☰</div>
+                </div>
+                
+                <nav class="nav-bar">
+                    <div class="nav-left">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-icon">🏪</span>
+                    </div>
+                    <div class="nav-right">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-icon" id="btn-messenger">💬</span>
+                        <span class="nav-icon">📦</span>
+                        <span class="nav-icon">🔍</span>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="scrollable-content">
+                <!-- Centered Posting Area -->
+                <section class="post-input-section">
+                    <div class="centered-input-container">
+                        <div class="user-avatar-small">👤</div>
+                        <input type="text" placeholder="How's your farm today?" class="farm-input">
+                    </div>
+                    <p class="location-text">Location: <span id="display-location">Loading...</span></p>
+                </section>
+
+                <!-- Market Price Dashboard -->
+                <section class="market-dashboard">
+                    <h3 class="dashboard-title">Market Price as of <span id="price-date">(day)</span></h3>
+                    <div class="price-table">
+                        <div class="table-header">
+                            <span>Commodity</span><span>Spec</span><span>Unit</span><span>Avg Price</span>
+                        </div>
+                        <div id="price-rows">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+                    <button class="bulk-btn">Join Bulk Sale</button>
+                </section>
+
+                <!-- Feed Area -->
+                <div id="home-feed">
+                    <!-- Posts filled by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

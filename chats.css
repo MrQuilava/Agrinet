@@ -1,0 +1,183 @@
+:root {
+    --dark-green: #0d2b1d;
+    --mint-green: #a3e0a1;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.messenger-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: var(--dark-green);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps the header and footer fixed */
+}
+
+/* Header & Nav */
+.chat-header-main { 
+    background-color: var(--mint-green); 
+    padding: 10px 15px; 
+}
+
+.header-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.chat-logo { height: 30px; }
+
+.header-nav { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 10px; 
+    font-weight: bold; 
+    color: var(--dark-green); 
+    align-items: center;
+}
+
+/* Exit Button Styling */
+.exit-btn a {
+    text-decoration: none;
+    color: var(--dark-green);
+    font-size: 14px;
+    border: 1px solid var(--dark-green);
+    padding: 3px 8px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.exit-btn a:hover {
+    background-color: var(--dark-green);
+    color: var(--mint-green);
+}
+
+/* Friend Strip */
+.active-user-strip {
+    background-color: var(--mint-green);
+    border-top: 2px solid var(--dark-green);
+    display: flex; 
+    align-items: center; 
+    padding: 10px 15px; 
+    gap: 10px;
+}
+
+/* Dynamic Name in Header */
+#chatPartnerName {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--dark-green);
+    text-transform: capitalize;
+}
+
+.friend-action-btn {
+    margin-left: auto;
+    background: var(--dark-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* --- THE DYNAMIC CHAT AREA --- */
+.chat-area {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto; 
+}
+
+/* Message Rows */
+.msg-row { 
+    display: flex; 
+    align-items: flex-end; 
+    gap: 8px; 
+    width: 100%; 
+}
+
+.msg-row.received { justify-content: flex-start; }
+.msg-row.sent { justify-content: flex-end; }
+
+/* The Bubbles */
+.bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-weight: 500;
+}
+
+/* Received: Mint Green with 'tail' */
+.msg-row.received .bubble {
+    background-color: var(--mint-green);
+    color: var(--dark-green);
+    border-bottom-left-radius: 4px;
+}
+
+/* Sent: White with 'tail' */
+.msg-row.sent .bubble {
+    background-color: var(--white);
+    color: var(--dark-green);
+    border-bottom-right-radius: 4px;
+}
+
+.avatar-xs {
+    width: 32px;
+    height: 32px;
+    background-color: var(--mint-green);
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 16px;
+}
+
+/* Footer Input */
+.chat-footer {
+    background-color: var(--mint-green);
+    padding: 10px 15px;
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+
+.input-pill {
+    flex: 1; 
+    background-color: var(--dark-green);
+    border-radius: 20px; 
+    padding: 8px 15px;
+}
+
+.input-pill input {
+    width: 100%; 
+    background: transparent; 
+    border: none; 
+    color: white; 
+    outline: none;
+}
+
+.footer-actions { 
+    display: flex; 
+    gap: 12px; 
+    font-size: 22px; 
+    color: var(--dark-green); 
+    cursor: pointer; 
+}
+
+.send-btn {
+    transition: transform 0.2s;
+}
+
+.send-btn:active {
+    transform: scale(1.2);
+}

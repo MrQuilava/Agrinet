@@ -1,0 +1,80 @@
+{
+  "users": {
+    "dan_guevara": {
+      "name": "Dan Gabriel I. Guevara",
+      "location": "Alangilan, Batangas City",
+      "role": "Computer Science Student / AgriTech Dev",
+      "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Dan",
+      "friends": {
+        "allen_capinpin": true,
+        "calix_dev": true
+      }
+    },
+    "allen_capinpin": {
+      "name": "Allen Capinpin",
+      "location": "Balagtas, Batangas City",
+      "role": "Farmer / Vendor",
+      "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Allen",
+      "friends": {
+        "dan_guevara": true
+      }
+    }
+  },
+  "posts": {
+    "post_001": {
+      "userID": "allen_capinpin",
+      "headline": "SELLING FRESH KAMATIS",
+      "location": "Balagtas, Batangas City",
+      "description": "Premium Quality, Freshly Picked from our farm in Batangas City. Ready for bulk orders!",
+      "timestamp": 1714896000000,
+      "images": [
+        "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400",
+        "https://images.unsplash.com/photo-1518977676601-b53f02bad675?w=400",
+        "https://images.unsplash.com/photo-1591130901024-db72f82956f1?w=400",
+        "https://images.unsplash.com/photo-1546470427-227c73136203?w=400"
+      ]
+    },
+    "post_002": {
+      "userID": "dan_guevara",
+      "headline": "AGRINET ALPHA TESTING",
+      "location": "Batangas State University",
+      "description": "Testing the real-time Firebase integration for our AgriNet messenger and home feed.",
+      "timestamp": 1714897500000,
+      "images": [
+        "https://images.unsplash.com/photo-1558444479-c8f027d8a5db?w=400"
+      ]
+    }
+  },
+  "marketPrices": {
+    "dateUpdated": "May 5, 2026",
+    "commodities": [
+      {
+        "name": "Kamatis",
+        "specification": "Class A",
+        "unit": "kg",
+        "weeklyAvg": "₱45.00"
+      },
+      {
+        "name": "Siling Labuyo",
+        "specification": "Native",
+        "unit": "kg",
+        "weeklyAvg": "₱120.00"
+      },
+      {
+        "name": "Bigas (Dinorado)",
+        "specification": "Well-milled",
+        "unit": "50kg sack",
+        "weeklyAvg": "₱2,450.00"
+      }
+    ]
+  },
+  "chats": {
+    "dan_guevara_and_allen_capinpin": {
+      "msg_101": {
+        "sender": "dan_guevara",
+        "message": "Hi Allen! Checking the logistics for the tomato delivery.",
+        "time": 1714898000000
+      }
+    }
+  }
+}
